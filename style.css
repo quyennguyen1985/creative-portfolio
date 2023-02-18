@@ -24,6 +24,10 @@ h1, h2, h5 {
     margin: 20px;
 }
 
+h1.gamepj {
+    font-family: var(--game-title-font);
+}
+
 .col {
     padding-left: 20px;
 }
