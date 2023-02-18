@@ -13,11 +13,12 @@ body {
     width: 100%;
 }
 
-.container {
+.container, footer {
     width: 100%;
     padding: 100px 50px;
     margin: 0 auto;
-    font-family: var(--content-font);}
+    font-family: var(--content-font);
+}
 
 h1, h2, h5 {
     font-family: var(--header-font);
@@ -26,6 +27,7 @@ h1, h2, h5 {
 
 h1.gamepj {
     font-family: var(--game-title-font);
+    font-size: 70px;
 }
 
 .col {
