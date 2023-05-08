@@ -10,7 +10,6 @@
 body {
     background: var(--secondary-color);
     text-align: center;
-    width: 100%;
 }
 
 .container, footer {
@@ -44,30 +43,6 @@ h1.hero {
 
 img {
     width: 100%;
-}
-
-.story {
-    text-align: left;
-}
-
-.pima-collection {
-height: 1000px;
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-.pima-header {
-    color: var(--primary-color);
-    text-align: left;
-}
-
-.pima-description {
-    text-align: left;
-    display: block;
-    margin: 50px;
 }
 
 img.bg-logo {

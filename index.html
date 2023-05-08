@@ -26,14 +26,11 @@
 body {
   background: #fff;
   position: relative;
+  height: 13000px;
 }
 
-.intro {
-  padding: 50px;
-}
-
-* {
-  box-sizing: border-box;
+.container {
+  padding-left: 0;
 }
 
 .main-content {
@@ -64,11 +61,63 @@ h1.intro {
 .personal-logo {
   text-align: top left;
 }
-</style>
 
+#object {
+    left: 10;
+    position: fixed;
+    bottom: 15%;
+    height: 100px;
+    width: 100px;
+}
+
+.slide {
+  padding-top: 0%;
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 400vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+  left: 0px
+}
+.one, .two, .three, .four {
+  margin: 0 auto;
+  width: 400vw;
+}
+.one {
+  background: black;
+}
+.two {
+  background: yellowgreen;
+}
+.three {
+  background: hotpink;
+}
+.four {
+  background: navy;
+}
+.outer-wrapper {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-84vh) translateY(-18.1vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+</style>
 <script src="https://kit.fontawesome.com/a52b246794.js" crossorigin="anonymous"></script>
 </head>
 <body>
+       <!-- 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.html">
@@ -105,39 +154,26 @@ h1.intro {
               </div>
             </div>
           </nav>
+
+          -->
           <div class="container">
-            <div class="intro">
-              <h1 class="intro"> DIGITAL CREATIVE PORTFOLIO <br /> <br />
-              by Quyen Nguyen
+            <div class="hero">
+              <h1 class="hero">  <br /> <br />
               </h1>
             </div>
-            
-     <!--Footer-->
-    <footer>
-      <div class="row">
-        <div class="col">
-            <a href="mailto:cvrixnguyen1985@gmail.com">
-                <i class="fa-solid fa-at"></i>
-            </a>
-        </div>
-        <div class="col">
-            <a href="https://github.com/quyennguyen1985" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="col">
-            <a href="https://www.linkedin.com/in/nguyen-quyen-b68790240/" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-        </div>
-      </div>
-      <p class="footer-paragraph">
-        This is coded by Quyen Nguyen, and is 
-        <a href ="https://github.com/quyennguyen1985/shecodes-porfolio-pj" class="link-to-git"> 
-          <span> Open-sourced </span> </a>
-      </p>
-    </footer>
+
+            <div class="outer-wrapper">
+              <div class="wrapper">
+                <div class="slide one"></div>
+                <div class="slide two"></div>
+                <div class="slide three"></div>
+                <div class="slide four"></div>
+              </div>
             </div>
-    </div>
+
+            <div>
+              <img src="images/dino.png" id="object"> 
+            </div>
+            <script src="animhero.js"></script>
 </body>
 </html>
