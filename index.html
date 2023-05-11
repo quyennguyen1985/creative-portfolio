@@ -23,9 +23,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
 
 <style>
+@font-face {
+  font-family: 'Karmatic Arcade';
+  src: url(karmatic-arcade.regular.ttf) format('truetype');
+}
+
 body {
-  background: pink;
   position: relative;
+  background-image: url('https://thumbs.dreamstime.com/b/pixel-game-background-pixel-art-game-scene-green-grass-tall-trees-against-blue-sky-clouds-pixelated-template-213444555.jpg');
 }
 
 .container {
@@ -45,28 +50,8 @@ h1 {
   cursor: pointer;
 }
 
-h1 {
-  position: relative;
-  color: #fff;
-  font: 900 100px;
-  text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-h1.intro {
-  color: black;
-  cursor: default;
-}
-
 .personal-logo {
   text-align: top left;
-}
-
-#object {
-    left: 10;
-    position: fixed;
-    bottom: 15%;
-    height: 100px;
-    width: 100px;
 }
 
 .slide {
@@ -82,46 +67,79 @@ h1.intro {
   transform-origin: top left;
   left: 0px
 }
-.one, .two, .three, .four {
-  margin: 0 auto;
-  width: 400vw;
-  position: relative;
-  background-size: cover;
-}
-.one {
-  background: black;
-  opacity: 0;
-}
-.two {
-  background: yellowgreen;
-}
-.three {
-  background: hotpink;
-}
-.four {
-  background: navy;
-}
-.outer-wrapper {
-  width: 100vh;
-  height: 100vw;
-  transform: rotate(-90deg) translateX(-84vh) translateY(-18.1vh);
-  transform-origin: top left;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  position: absolute;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
 ::-webkit-scrollbar {
   display: none;
 }
 
+/*HEADER ANIM*/
 .typewrite {
-  color: white;
+  font-family: 'Karmatic Arcade';
+  color: navy;
   text-decoration: none;
   text-align: center;
 }
 
+div {
+  font-family: 'Karmatic Arcade';
+}
+
+/*CHARACTER ANIM*/
+.sprite {
+	width: 102px;
+	height: 148px;
+  margin-top: 350px;
+  display: block;
+}
+
+.right {
+	background-image: url(https://atomicrobotdesign.com/blog_media/css-sprite/standing-right.png);
+}
+
+.left {
+	background-image: url(https://atomicrobotdesign.com/blog_media/css-sprite/standing-left.png);
+}
+
+.walk-right {
+	background-image: url(https://atomicrobotdesign.com/blog_media/css-sprite/walk-right.png);
+	-webkit-animation: walk .9s steps(6) infinite;
+	-moz-animation: walk .9s steps(6) infinite;
+	-ms-animation: walk .9s steps(6) infinite;
+	-o-animation: walk .9s steps(6) infinite;
+	animation: walk .9s steps(6) infinite;
+}
+
+.walk-left {
+	background-image: url(https://atomicrobotdesign.com/blog_media/css-sprite/walk-left.png);
+	-webkit-animation: walk .9s steps(6) infinite;
+	-moz-animation: walk .9s steps(6) infinite;
+	-ms-animation: walk .9s steps(6) infinite;
+	-o-animation: walk .9s steps(6) infinite;
+	animation: walk .9s steps(6) infinite;
+}
+
+@-webkit-keyframes walk {
+	from { background-position: 0px; }
+	to { background-position: -612px; }
+}
+@-moz-keyframes walk {
+	from { background-position: 0px; }
+	to { background-position: -612px; }
+}
+@-ms-keyframes walk {
+	from { background-position: 0px; }
+	to { background-position: -612px; }
+}
+@-o-keyframes walk {
+	from { background-position: 0px; }
+	to { background-position: -612px; }
+}
+@-keyframes walk {
+	from { background-position: 0px; }
+	to { background-position: -612px; }
+}
+a:hover {
+  color: navy;
+}
 </style>
 <script src="https://kit.fontawesome.com/a52b246794.js" crossorigin="anonymous"></script>
 </head>
@@ -169,9 +187,10 @@ h1.intro {
             <section class="hero section1">
               <h1>
                 <a href="" class="typewrite" data-period="2000" 
-                data-type='[ "Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+                data-type='[ "WELCOME TO MY CREATIVE PORTFOLIO", "PRESS LEFT AND RIGHT ARROW KEYS TO START THE JOURNEY!" ]'>
                   <span class="wrap"></span>
                 </a>
+
                 <script>
                   var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
@@ -230,23 +249,7 @@ h1.intro {
         document.body.appendChild(css);
     };
                 </script>
-              </h1>
-              <h1 class="hero">  <br /> <br />
-              </h1>
-            </section>
-
-            <div class="outer-wrapper">
-              <div class="wrapper">
-                <div class="slide one"></div>
-                <div class="slide two"></div>
-                <div class="slide three"></div>
-                <div class="slide four"></div>
-              </div>
-            </div>
-
-            <div>
-              <img src="https://w1.pngwing.com/pngs/697/918/png-transparent-3d-walk-cycle-sprite-walking-computer-animation-3d-computer-graphics-human-css-sprites.png" id="object"> 
-            </div>
+    <div class="sprite right"></div>
             <script src="animhero.js"></script>
 </body>
 </html>
