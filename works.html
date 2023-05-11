@@ -24,9 +24,330 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
 
 <script src="https://kit.fontawesome.com/a52b246794.js" crossorigin="anonymous"></script>
+
+<style>
+  #title {
+    width: 70%;
+  }
+
+  body {
+    background-color: var(--secondary-color);
+    padding: 100px 0;
+  }
+/*NAVBAR*/
+  *,*:before,*:after {
+}
+
+li {
+  list-style-type: none;
+}
+
+:after {
+	content: "";
+}
+
+section {
+  position: relative;
+  left: 100px;
+}
+
+h1 { 
+  margin:80px 0 10px 0;
+  font-size: 52px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #DC143C,
+	2px 2px 0px #DC143C,
+	3px 3px 0px #DC143C,
+	4px 4px 0px #DC143C;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+nav {
+  float: left;
+	position: relative;
+	top: 0;
+  left: 0;
+	background: transparent;
+}
+
+nav ul {
+	text-align: center;
+}
+
+nav ul li {
+	position: relative;
+  width: 70px;
+  cursor: pointer;
+	background: crimson;
+	text-transform: uppercase;
+	transition:all .4s ease-out;
+}
+
+nav ul li:after {
+	position: absolute;
+	background: white;
+	color: crimson;
+	top:0;
+	left: 70px;
+	width: 70px; height: 100%;
+  opacity:.5;
+  transform: perspective(400px) rotateY(90deg);
+	transform-origin: 0 100%;
+	transition:all .4s ease-out;
+}
+
+nav ul li:nth-child(1):after { 
+	content: "Home";
+	line-height: 88px;
+}
+nav ul li:nth-child(2):after { 
+	content: "About";
+	line-height: 88px;
+}
+nav ul li:nth-child(3):after { 
+	content: "Work";
+	line-height: 85px;
+}
+nav ul li:nth-child(4):after { 
+	content: "Say hi";
+	line-height: 70px;
+}
+
+nav ul li:hover {
+	transform: translateX(-70px);
+}
+
+nav ul li:hover:after {
+  opacity: 1;
+	transform: perspective(400px) rotateY(0deg) scale(1) ;
+}
+
+
+nav ul li > div {
+	display: inline-block;
+	padding: 25px 0;
+	background: transparent;
+}
+
+nav ul li div { position: relative; }
+
+.roof {
+	width: 0;
+	height: 0;
+	top:2px;
+	border-style: solid;
+	border-width: 0 21px 15px 21px;
+	border-color: transparent transparent #ffffff transparent;
+}
+
+.roof-edge {
+	position: absolute;
+	z-index: 20;
+	left: -17px;
+	top: 3px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 17px 12px 17px;
+	border-color: transparent transparent crimson transparent;
+}
+/*white triangle over red triangle*/
+.roof-edge:after {
+	position: absolute;
+	left: -14.5px;
+	top: 3px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 14.5px 10px 14.5px;
+	border-color: transparent transparent white transparent;
+}
+
+.front {
+	position: relative;
+	top: 3px;
+	width: 28.5px;
+	height: 20px;
+	margin: 0 auto;
+	background: white;
+}
+/*door*/
+.front:after {
+	position: absolute;
+	background: crimson;
+	width: 11px;
+	height: 13px;
+	bottom: 0;
+	left:9px;
+}
+
+/*/// About me ////*/
+
+.head {
+	width: 32px;
+	height: 35px;
+	background: white;
+	border-radius:8px;
+}
+/*mouth*/
+.head:after {
+	width: 4px;
+	height: 10px;
+	background: white;
+	position: absolute;
+	border-radius:4px 0 0 4px;
+	top:21px;
+	left: 14px;
+	transform:rotate(270deg);
+}
+
+.eyes {
+	width: 8px;
+	height: 5px;
+	border-radius: 50%;
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	background: crimson;
+}
+/*right eye*/
+.eyes:after {
+	width: 8px;
+	height: 5px;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 14px;
+	background: crimson;
+}
+
+.beard {
+	width: 32px;
+	height: 17px;
+	background: crimson;
+	border:2px solid white;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-radius:0 0 8px 8px;
+}
+/*nose*/
+.beard:after {
+	position: absolute;
+	top:-2px;
+	left: 11px;
+	background: white;
+	width:6px;
+	height: 4px;
+	border-left:1px solid crimson;
+	border-right:1px solid crimson;
+}
+
+/*//work//*/
+
+.paper {
+	position: relative;
+	height:32px;
+	width: 29px;
+	background: white;
+	border:2px solid white;
+}
+
+/*window*/
+.paper:after {
+	position: absolute;
+	top:1px;
+	left: 0;
+	width: 25px;
+	height: 29px;
+	background: white;
+	border-top:4px solid crimson;
+}
+
+.lines {
+	position: absolute;
+	top: 36px;
+	left: 5px;
+	width: 11px;
+	box-shadow: 0 0 0 1px crimson;
+}
+
+.lines:after {
+	position: absolute;
+	top: 4px;
+	left: 3px;
+	width: 14px;
+	box-shadow: 0 0 0 1px crimson;
+}
+
+.lines:nth-child(2) {
+	position: absolute;
+	top: 44px;
+	left: 8px;
+	width: 11px;
+}
+
+.lines:nth-child(2):after {
+	position: absolute;
+	top: 4px;
+	left: -3px;
+	width: 11px;
+}
+
+.lines:nth-child(3) {
+	position: absolute;
+	top: 52px;
+	left: 8px;
+	width: 14px;
+}
+
+.lines:nth-child(3):after {
+	display: none;
+}
+
+/*//mail //*/
+
+.mail-base {
+	position: relative;
+	width: 32px;
+	height: 18px;
+	background: white;
+}
+
+.mail-top {
+	position: absolute;
+	z-index: 20;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	transform: rotate(180deg);
+	border-style: solid;
+	border-width: 0 16px 11px 16px;
+	border-color: transparent transparent crimson transparent;
+}
+
+.mail-top:after {
+	position: absolute;
+	z-index: 20;
+	left: -16px;
+	top: 3px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 16px 9px 16px;
+	border-color: transparent transparent white transparent;
+}
+/*END OF NAVBAR*/
+</style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!--
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
             <img class="personal logo" src="images/logo.PNG" width="50" height="50">
@@ -62,172 +383,46 @@
           </div>
         </div>
       </nav>
+      --> 
+
+      <nav>
+        <ul>
+          <li>
+            <div class="home-icon">
+              <div class="roof">
+                <div class="roof-edge"></div>
+              </div>
+              <div class="front"></div>
+            </div>
+          </li>
+          <li>
+            <div class="about-icon">
+              <div class="head">
+                <div class="eyes"></div>
+                <div class="beard"></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="work-icon">
+              <div class="paper"></div>
+              <div class="lines"></div>
+              <div class="lines"></div>
+              <div class="lines"></div>
+            </div>
+          </li>
+          <li>
+            <div class="mail-icon">
+              <div class="mail-base">
+                <div class="mail-top"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
       <div class="container">
-      <div class="hero-homepage">
-        <h1 class="hero">
-          My <br /> pixel-lery
-        </h1>
-        </div>
-          <div class="pima-collection">
-          <h1 class="pima-header d-md-block d-none">
-            PiMA project
-          </h1> 
-          <p class="pima-description d-md-block d-none">
-            PiMA, aka Project in Mathematics and Applications, 
-            is a non-profit project founded by Mathematics enthusiasts
-            from some of the major universities in the world.
-          </p>
-        </div>
-          <img src="images/transpimalogo.png" class="img-fluid bg-logo d-md-block d-none" />
-        <div class="row">
-          <div class="col align-self-start">
-            <img src="images/final.png" alt="PIMA cat" class="img-fluid rounded" />
-            <br />
-            <br />
-            <h5>
-              My first piece
-            </h5>
-            <p> Febuary 28th, 2022</p>
-          </div>
-          <div class="col align-self-center">
-            <img src="images/Baitoanhonnhan.PNG" alt="PIMA logo" class="img-fluid rounded d-md-none d-block" />
-            <h5>
-              My second piece
-            </h5>
-            <img src="images/Baitoanhonnhan.PNG" alt="PIMA logo" class="img-fluid rounded d-md-block d-none" />
-          <p> March 3rd, 2022</p>
-          </div>
-          <div class="col align-self-end">
-            <img src="images/formclosed.png" alt="PIMA closed" class="img-fluid rounded d-md-none d-block" />
-            <h5> My third piece</h5>
-            <p>
-              March 8th, 2022
-            </p>
-            <img src="images/formclosed.png" alt="PIMA closed" class="img-fluid rounded d-md-block d-none" />
-          </div>
-          </div>
-          <br />
-          <div class="pima-collection">
-            <h1 class="pima-header d-md-block d-none">
-              Ong Sang Tao club
-            </h1> 
-            <p class="pima-description d-md-block d-none">
-              Ong Sang Tao science club is the most long-standing club of Nguyen Thi Minh Khai high school
-              based in Ho Chi Minh city, Vietnam.
-            </p>
-          </div>
-          <img src="images/ostlogo.png" class="img-fluid bg-logo d-md-block d-none" width="1000px" />  
-          <br />
-          <p>
-            This collection below is designed specifically for Nguyen Thi Minh Khai high school's students.
-            <br />
-            These designs are for making badges and for internal sales purposes
-          </p>
-          <br />
-          <div class="row ost">
-            <div class="col-md-6">
-              <img src="images/badgemk.png" class="img-fluid rounded" alt="first badge" />
-            </div>
-            <div class="col-md-6">
-              <h2 class="mb-3">THAP DONG HO MINH KHAI</h2>
-              <h3> (Minh Khai's clock tower)</h3>
-              <p>
-                As one of the most symbolic objects, 
-                I decided to potray the iconic clock tower located at 
-                the front of our school.
-              </p>
-            </div>
-          </div>
-
-          <div class="row mt-5">
-            <div class="col-md-6">
-              <div class="col-md-6">
-                <img src="images/badgebd.png" class="img-fluid rounded d-md-none d-block" />
-              </div>
-              <h2 class="mb-3">MIKI FC</h2>
-              <h3> (Minh Khai football club)</h3>
-              <p>
-                Designed to show gratitude towards our school's football club 
-                as they have competed well and won in many important games
-              </p>
-            </div>
-            <div class="col-md-6">
-              <img src="images/badgebd.png" class="img-fluid rounded d-md-block d-none" />
-            </div>
-          </div>
-
-          <div class="row mt-5">
-            <div class="col-md-6">
-              <img src="images/badgecp1.png" class="img-fluid rounded" />
-            </div>
-            <div class="col-md-6">
-              <h2 class="mb-3">NAM SINH MINH KHAI</h2>
-              <h3>(Minh Khai's "meow" students)</h3>
-              <p>
-                Our school has also been home to a couple of stray cats,
-                one of them is a male so I turned him into our male student:
-                wears a cool uniform and usually is a gentlemeow!
-              </p>
-            </div>    
-
-            <div class="row mt-5">
-              <div class="col-md-6">
-                <div class="col-md-6">
-                  <img src="images/badgecp2.png" class="img-fluid rounded d-md-none d-block" />
-                </div>
-                <h2 class="mb-3">NU SINH MINH KHAI</h2>
-                <h3>(Minh Khai's fe"meow" students)</h3>
-                <p>
-                  This gorgeous cat is the other one in the feline duo.
-                  Same with the boy, she wears our iconic female uniform in purple.
-                  She is honey sweet but will bite!
-                </p>
-              </div>
-              <div class="col-md-6">
-                <img src="images/badgecp2.png" class="img-fluid rounded d-md-block d-none" />
-              </div>
-            </div>
-
-            <div class="row mt-5">
-              <div class="col-md-6">
-                <img src="images/badgehoboi.png" class="img-fluid rounded" />
-              </div>
-            <div class="col-md-6">
-              <h2 class="mb-3">HO BOI MINH KHAI</h2>
-              <h3>(Minh Khai's pool)</h3>
-              <p>
-                The pool is one of the best places to take some mesmerizing pictures
-                at our school. And we don't raise ducks, just so you know.
-              </p>
-            </div> 
-</div>
-        </div>
-        <! Footer >
-        <footer>
-        <div class="row">
-          <div class="col">
-              <a href="mailto:cvrixnguyen1985@gmail.com">
-                  <i class="fa-solid fa-at"></i>
-              </a>
-          </div>
-          <div class="col">
-              <a href="https://github.com/quyennguyen1985" target="_blank">
-                  <i class="fa-brands fa-github"></i>
-              </a>
-          </div>
-          <div class="col">
-              <a href="https://www.linkedin.com/in/nguyen-quyen-b68790240/" target="_blank">
-                  <i class="fa-brands fa-linkedin"></i>
-              </a>
-          </div>
-        </div>
-        <p class="footer-paragraph">
-          This is coded by Quyen Nguyen, and is 
-          <a href ="https://github.com/quyennguyen1985/shecodes-porfolio-pj" class="link-to-git"> 
-            <span> Open-sourced </span> </a>
-        </p>
-      </footer>
-        <!Footer>
+        <img src="images/gametitle.PNG" id="title">
       </div>
 </body>
 </html>
