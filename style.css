@@ -86,11 +86,12 @@ a.link:hover {
     top: 0;
     width: 100%;
     font-family: var(--content-font);
-  }
-  
+    background-color: var(--secondary-color);
+}
+
 .navbar-brand {
     font-family: var(--header-font);
-    color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 5px 10px;
 }
 

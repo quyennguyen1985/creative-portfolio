@@ -30,7 +30,10 @@
 
 body {
   position: relative;
-  background-image: url('https://thumbs.dreamstime.com/b/pixel-game-background-pixel-art-game-scene-green-grass-tall-trees-against-blue-sky-clouds-pixelated-template-213444555.jpg');
+  background-color: var(--secondary-color);
+overflow: -moz-scrollbars-horizontal;
+overflow-y: hidden;
+overflow-x: auto;  
 }
 
 .container {
@@ -74,78 +77,55 @@ h1 {
 /*HEADER ANIM*/
 .typewrite {
   font-family: 'Karmatic Arcade';
-  color: navy;
+  color: var(--primary-color);
   text-decoration: none;
   text-align: center;
-}
-
-div {
-  font-family: 'Karmatic Arcade';
-}
-
-/*CHARACTER ANIM*/
-.sprite {
-	width: 102px;
-	height: 148px;
-  margin-top: 350px;
+  position: absolute;
   display: block;
+  top: 100px;
+  padding: 30px 40px;
 }
 
-.right {
-	background-image: url(https://atomicrobotdesign.com/blog_media/css-sprite/standing-right.png);
-}
-
-.left {
-	background-image: url(https://atomicrobotdesign.com/blog_media/css-sprite/standing-left.png);
-}
-
-.walk-right {
-	background-image: url(https://atomicrobotdesign.com/blog_media/css-sprite/walk-right.png);
-	-webkit-animation: walk .9s steps(6) infinite;
-	-moz-animation: walk .9s steps(6) infinite;
-	-ms-animation: walk .9s steps(6) infinite;
-	-o-animation: walk .9s steps(6) infinite;
-	animation: walk .9s steps(6) infinite;
-}
-
-.walk-left {
-	background-image: url(https://atomicrobotdesign.com/blog_media/css-sprite/walk-left.png);
-	-webkit-animation: walk .9s steps(6) infinite;
-	-moz-animation: walk .9s steps(6) infinite;
-	-ms-animation: walk .9s steps(6) infinite;
-	-o-animation: walk .9s steps(6) infinite;
-	animation: walk .9s steps(6) infinite;
-}
-
-@-webkit-keyframes walk {
-	from { background-position: 0px; }
-	to { background-position: -612px; }
-}
-@-moz-keyframes walk {
-	from { background-position: 0px; }
-	to { background-position: -612px; }
-}
-@-ms-keyframes walk {
-	from { background-position: 0px; }
-	to { background-position: -612px; }
-}
-@-o-keyframes walk {
-	from { background-position: 0px; }
-	to { background-position: -612px; }
-}
-@-keyframes walk {
-	from { background-position: 0px; }
-	to { background-position: -612px; }
-}
 a:hover {
   color: navy;
 }
+
+/*CHARACTER ANIM*/
+.mascot {
+  width: 200px;
+  position: absolute;
+  top: 300px;
+}
+
+/*HORIZONTAL SCROLL*/
+.scroll-container{
+  overflow: auto;
+  white-space: nowrap;
+  background: transparent;
+  height: 90%;
+}
+
+.gridscroll img {
+  width: 65%;
+}
+
+.gridscroll {
+  display:inline-block;
+}
+
 </style>
 <script src="https://kit.fontawesome.com/a52b246794.js" crossorigin="anonymous"></script>
 </head>
 <body>
-       <!-- 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="scroll-container">
+    <div class="gridscroll">
+        <img src="https://thumbs.dreamstime.com/b/pixel-game-background-pixel-art-game-scene-green-grass-tall-trees-against-blue-sky-clouds-pixelated-template-213444555.jpg" height="600px"/>
+        <img src="images/minhkhaibg.PNG"/> 
+        <img src="images/minhkhaibg.PNG"/> 
+      </div>
+  </div>
+<!--
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.html">
                 <img class="personal logo" src="images/logo.PNG" width="50" height="50">
@@ -181,8 +161,8 @@ a:hover {
               </div>
             </div>
           </nav>
-
-          -->
+-->
+          <!--TYPEWRITE HEADER-->
           <div class="container">
             <section class="hero section1">
               <h1>
@@ -249,7 +229,9 @@ a:hover {
         document.body.appendChild(css);
     };
                 </script>
-    <div class="sprite right"></div>
+    <div class="mascot">
+      <img src="images/mascotgif.GIF">
+    </div>
             <script src="animhero.js"></script>
 </body>
 </html>
