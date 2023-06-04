@@ -24,8 +24,8 @@
 
 <style>
 @font-face {
-  font-family: 'Karmatic Arcade';
-  src: url(karmatic-arcade.regular.ttf) format('truetype');
+  font-family: 'Hagrid Regular';
+  src: url(Hagrid-Regular-trial.ttf) format('truetype');
 }
 
 body {
@@ -69,6 +69,117 @@ h1 {
   width: 50%;
   height: auto;
   padding: 100px;
+}
+
+/*HEARDER*/
+.content {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(-10%, -50%);
+  height: 160px;
+  line-height: 50px;
+  padding: 100px 0px;
+  color: #a3c143;
+  font-family: "Hagrid Regular";
+}
+  
+  .content-container {
+    font-weight: 600;
+    overflow: hidden;
+    height: 100px;
+    padding: 0 40px;
+  }
+
+    .content-container-text {
+      display: inline;
+      float: left;
+      margin: 0;
+      font-size: 30px;
+      padding: 10px;
+    }
+
+    .content-container-list {
+      margin-top: 0;
+      padding-left: 200px;
+      text-align: left;
+      list-style: none;
+      
+      -webkit-animation-name: change;
+      -webkit-animation-duration: 10s;
+      -webkit-animation-iteration-count: infinite;
+      animation-name: change;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+    }
+
+     .content-container-list-item {
+        line-height: 103px;
+        margin: 0;
+        font-size: 90px;
+        text-align: justify;
+      }
+#headergame {
+  font-size: 200px;
+  margin: 100px;
+  text-align: left;
+  padding-left: 120px;
+
+}
+@-webkit-keyframes opacity {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
+}
+
+@-webkit-keyframes change {
+  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+  33.32%,45.98% {transform:translate3d(0,-50%,0);}
+  49.98%,62.64% {transform:translate3d(0,-75%,0);}
+  66.64%,79.3% {transform:translate3d(0,-50%,0);}
+  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+
+@-o-keyframes opacity {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
+}
+
+@-o-keyframes change {
+  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+  33.32%,45.98% {transform:translate3d(0,-50%,0);}
+  49.98%,62.64% {transform:translate3d(0,-75%,0);}
+  66.64%,79.3% {transform:translate3d(0,-50%,0);}
+  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+
+@-moz-keyframes opacity {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
+}
+
+@-moz-keyframes change {
+  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+  33.32%,45.98% {transform:translate3d(0,-50%,0);}
+  49.98%,62.64% {transform:translate3d(0,-75%,0);}
+  66.64%,79.3% {transform:translate3d(0,-50%,0);}
+  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+
+@keyframes opacity {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
+}
+
+@keyframes change {
+  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+  33.32%,45.98% {transform:translate3d(0,-50%,0);}
+  49.98%,62.64% {transform:translate3d(0,-75%,0);}
+  66.64%,79.3% {transform:translate3d(0,-50%,0);}
+  83.3%,95.96% {transform:translate3d(0,-25%,0);}
 }
 
 </style>
@@ -116,8 +227,20 @@ h1 {
             </div>
           </nav>
 
+<!--HEADER-->
+<div class="content">
+  <section id="headergame">GAME</section>
+  <div class="content-container">
+    <ul class="content-container-list">
+      <li class="content-container-list-item">PLAYER</li>
+      <li class="content-container-list-item">LOVER</li>
+      <li class="content-container-list-item">ENTHUSIAST</li>
+      <li class="content-container-list-item">DESIGNER WANNABE</li>
+    </ul>
+  </div>
+</div>
     <div class="mascot">
-      <img src="images/mascotgif.GIF" width="100%">
+      <img src="images/mascotgif.GIF">
     </div>
             <script src="animhero.js" ></script>
 </body>

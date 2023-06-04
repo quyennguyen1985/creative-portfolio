@@ -1,12 +1,16 @@
 :root {
-    --header-font: 'Montserrat Alternates', sans-serif;
+    --header-font: 'Hsgrid Regular', sans-serif;
     --content-font: 'Prompt', sans-serif;
     --game-title-font: 'Mynerve', cursive;
-    --primary-color: #424530;
-    --secondary-color: #FFEFCD;
-    --box-shadow: #465f37;
+    --primary-color: #a3c143;
+    --secondary-color: #faffe0;
+    --box-shadow: #616f39;
 }
 
+@font-face {
+    font-family: 'Hagrid Regular';
+    src: url(Hagrid-Regular-trial.ttf) format('truetype');
+}
 body {
     background: var(--secondary-color);
     text-align: center;
