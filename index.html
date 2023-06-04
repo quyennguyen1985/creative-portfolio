@@ -31,9 +31,11 @@
 body {
   position: relative;
   background-color: var(--secondary-color);
-overflow: -moz-scrollbars-horizontal;
-overflow-y: hidden;
-overflow-x: auto;  
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .container {
@@ -42,7 +44,6 @@ overflow-x: auto;
 
 .main-content {
   text-align: center;
-  scroll-snap-type: y mandatory;
   position: relative;
   height: 100vh;
 }
@@ -62,17 +63,7 @@ h1 {
   width: 100vw;
   height: 100vh;
 }
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  width: 400vw;
-  transform: rotate(90deg) translateY(-100vh);
-  transform-origin: top left;
-  left: 0px
-}
-::-webkit-scrollbar {
-  display: none;
-}
+
 
 /*HEADER ANIM*/
 .typewrite {
@@ -92,25 +83,8 @@ a:hover {
 
 /*CHARACTER ANIM*/
 .mascot {
-  width: 20%;
-  position: absolute;
-  top: 80%;
-}
-
-/*HORIZONTAL SCROLL*/
-.scroll-container{
-  overflow: auto;
-  white-space: nowrap;
-  background: transparent;
-  height: 90%;
-}
-
-.gridscroll img {
-  width: 65%;
-}
-
-.gridscroll {
-  display:inline-block;
+  width: 90%;
+  height: auto;
 }
 
 </style>
@@ -119,12 +93,8 @@ a:hover {
 <body>
     <div class="scroll-container">
     <div class="gridscroll">
-        <img src="https://thumbs.dreamstime.com/b/pixel-game-background-pixel-art-game-scene-green-grass-tall-trees-against-blue-sky-clouds-pixelated-template-213444555.jpg" height="600px"/>
-        <img src="images/minhkhaibg.PNG"/> 
-        <img src="images/minhkhaibg.PNG"/> 
       </div>
-  </div>
-<!--
+    </div>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.html">
@@ -161,7 +131,6 @@ a:hover {
               </div>
             </div>
           </nav>
--->
           <!--TYPEWRITE HEADER-->
           <div class="container">
             <section class="hero section1">
@@ -230,8 +199,8 @@ a:hover {
     };
                 </script>
     <div class="mascot">
-      <img src="images/mascotgif.GIF">
+      <img src="images/mascotgif.GIF" width="100%">
     </div>
-            <script src="animhero.js"></script>
+            <script src="animhero.js" ></script>
 </body>
 </html>
